@@ -37,7 +37,7 @@ function setInfor() {
         return false;
     }
     let pw = password.length;
-    if (pw<6){
+    if (pw < 6 && pw != "") {
         alert('Mật khẩu quá ngắn, vui lòng nhập trên 6 ký tự');
         return false;
     }
@@ -48,7 +48,7 @@ function setInfor() {
     }
     if (Uname == "" || password == "" || email == "") {
         alert(" Vui lòng nhập đầy đủ thông tin");
-        return  false;
+        return false;
     } else {
         let isFind = false;
         for (let i = 0; i < userList.length; i++) {
@@ -70,6 +70,16 @@ function setInfor() {
     return true
 }
 
+function check(user) {
+    for (let contact of userList) {
+        let check1 = contact.userName;
+        if (check1 == user) {
+            return true
+        }
+    }
+    return false;
+}
+
 function validate() {
     let userName = document.getElementById("userName").value;
     let password = document.getElementById("password").value;
@@ -79,23 +89,24 @@ function validate() {
     } else if (userName == "") {
         alert("Hãy nhập Username");
         return false;
-    } else if (password == ""){
+    } else if (password == "") {
         alert("Hãy nhập password");
         return false;
     }
-    for (let i = 0; i < userList.length; i++) {
-        if (userList[i].userName === userName) {
-            if (userList[i].password === password) {
-                alert('Đăng nhập thành công');
-                return  true;
-            } else {
-                alert('Sai mật khẩu');
-                return false;
+    if (check(userName)) {
+        for (let i = 0; i < userList.length; i++) {
+            if (userList[i].userName === userName) {
+                if (userList[i].password === password) {
+                    alert('Đăng nhập thành công');
+                    return true;
+                } else {
+                    alert('Sai mật khẩu');
+                    return false;
+                }
             }
         }
+    } else {
+        alert("Username không tồn tại");
+        return false;
     }
 }
-
-
-
-
