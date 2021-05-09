@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="logIn.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="http://127.0.0.1:5500/home.html" class="sign-in-form" onsubmit="return validate()">
+                    <h2 class="title">Đăng nhập</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="userName">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password">
+                    </div>
+                    <!-- <button class="btn solid" onclick="login()">
+                        <a href="#" id="ok" ></a>Đăng nhập
+                    </button> -->
+                    <input type="submit" class="btn solid" value="Đăng nhập">
+                    <p class="social-text">Hoặc đăng nhập với:</p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <form action="http://127.0.0.1:5500/home.html" class="sign-up-form" onsubmit="return setInfor()">
+                    <h2 class="title">Đăng ký</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="uname">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="pw">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="RePassword" id="rpw">
+                    </div>
+                    <!-- <button class="btn solid" onclick="setInfor()">
+                        <a href="#"  ></a>Đăng Ký
+                    </button> -->
+                    <input type="submit" class="btn solid" value="Đăng ký">
+
+
+                    <p class="social-text">Hoặc đăng ký với:</p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Đăng ký ngay</h3>
+                    <p>Hãy trở thành một thành viên để nhận được nhiều ưu đãi</p>
+                    <button class="btn transparent" id="sign-up-btn">Đăng Ký</button>
+                </div>
+                <img src="image/1619567254_86415_640416.png" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Bạn đã là thành viên</h3>
+                    <p>Hãy đăng nhập ngay để tiếp tục lộ trình</p>
+                    <button class="btn transparent" id="sign-in-btn">Đăng Nhập</button>
+                </div>
+                <img src="image/1619567254_86415_640416.png" class="image">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="login.js"></script>
+</body>
+
+</html>
