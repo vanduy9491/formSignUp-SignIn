@@ -1,0 +1,52 @@
+footer {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    background-color: rgb(211, 196, 160);
+    padding: 10px 20px 10px 50px;
+}
+
+.footer_section_contact_form{
+    width: 65%;
+}
+
+.footer_section_contact_form  img{
+    width: 250px;
+    height: 170px;
+}
+
+.footer_section_about {
+    padding: 0px 15px;
+}
+
+.footer_adress {
+    padding: 0px 15px;
+    font-size: 20px;
+}
+
+.footer_bottom {
+    text-align: left;
+
+}
+
+.footer_content {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .footer_section_about  {
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 750px) {
+    .footer_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

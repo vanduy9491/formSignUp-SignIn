@@ -13,8 +13,13 @@ body{
     display: flex ;
     align-items: center;
     padding: 20px;
-    background-color: aqua;
+    background-color: rgb(211, 196, 160);
     background-size: 100%;
+    /* width: 100%;
+    max-width: 1600px;
+    height: auto;
+    background-color: rgb(211, 196, 160);
+     */
 }
 nav{
     flex: 1;
@@ -33,7 +38,7 @@ a{
     color: #555;
 }
 .container{
-    max-width: 1300px;
+    max-width: 100%;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -73,9 +78,7 @@ a{
 .header{
     background: radial-gradient(#fff,#ffd6d6);
 }
-.header .row{
-    margin-top: 70px;
-}
+
 .categories{
     margin: 70px 0;
 }
