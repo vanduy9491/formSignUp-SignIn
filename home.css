@@ -1,106 +1,118 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
 
 }
 
-.navbar{
-    display: flex ;
+.navbar {
+    display: flex;
     align-items: center;
     padding: 20px;
     background-color: rgb(211, 196, 160);
     background-size: 100%;
-    /* width: 100%;
-    max-width: 1600px;
-    height: auto;
-    background-color: rgb(211, 196, 160);
-     */
 }
-nav{
+
+nav {
     flex: 1;
     text-align: right;
 }
-nav ul{
+
+nav ul {
     display: inline-block;
     list-style-type: none;
 }
-nav ul li{
-    display:inline-block; 
-    margin-right: 20px ;
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
-a{
+
+a {
     text-decoration: none;
     color: #555;
 }
-.container{
+
+.container {
     max-width: 100%;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.col-2{
+
+.col-2 {
     flex-basis: 50%;
     min-width: 300px;
 
 }
-.col-2 img{
+
+.col-2 img {
     max-width: 100%;
     padding: 50px 0;
 }
-.col-2 h1{
+
+.col-2 h1 {
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;
 }
-.btn{
+
+.btn {
     display: inline-block;
     background: #ff523b;
     color: #fff;
     padding: 8px 30px;
-    margin:30px 0 ;
+    margin: 30px 0;
     border-radius: 30px;
 }
-.btn:hover{
-    background:#a71401 ;
+
+.btn:hover {
+    background: #a71401;
     transition-duration: 0.5s;
 }
-.header{
-    background: radial-gradient(#fff,#ffd6d6);
+
+.header {
+    background: radial-gradient(#fff, #ffd6d6);
 }
 
-.categories{
+.categories {
     margin: 70px 0;
 }
-.col-3{
+
+.col-3 {
     flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 30px;
 }
-.col-3 img{
+
+.col-3 img {
     width: 100%;
-    padding-right: 50px;  
+    padding-right: 50px;
 
 }
-.col-3 h2{
+
+.col-3 h2 {
     width: 100%;
     color: #b7e902;
 }
-.small-container{
-  max-width: 1080px;
-  margin: auto;
-  padding-left: 25px;
-  padding-right: 25px;  
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #build-route {
@@ -207,88 +219,100 @@ a{
 .ct-build-route .img-plane img {
     width: 100%
 }
-.col-4{
+
+.col-4 {
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-    transition: transform 0.5s ;
+    transition: transform 0.5s;
 }
-.col-4 img{
+
+.col-4 img {
     width: 100%;
 }
-.title{
+
+.title {
     text-align: center;
     margin: 0 auto 80px;
     position: relative;
     line-height: 60px;
     color: #555;
     font-size: 45px;
-    
+
 }
-/* .title::after{
-    content: '';
-    background: #ff523b;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom:0 ;
-    left: 50%;
-    transform: translateY(-10px);
-} */
-h4{
+
+h4 {
     color: #555;
     font-weight: 14px;
 }
-.col-4{
+
+.col-4 {
     font-size: 14px;
 }
-.col-4:hoveer{
-transform: translateY(-10px);
+
+.col-4:hoveer {
+    transform: translateY(-10px);
 }
-.offer{
-    background: radial-gradient(#fff,#ffd6d6);
+
+.offer {
+    background: radial-gradient(#fff, #ffd6d6);
     margin-top: 80px;
     padding: 30px 0;
 }
-.col-2 .offer img{
+
+.col-2 .offer img {
     padding: 50px;
 }
-.testimonial{
+
+.testimonial {
     padding-top: 100px;
 }
-.testimonial col-3{
+
+.testimonial col-3 {
     text-align: center;
     padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0, 0,1);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
     cursor: pointer;
 }
-.testimonial col-3 img{
+
+.testimonial col-3 img {
     width: 50%;
     margin-top: 20px;
     border-radius: 50%;
 }
-.testimonial .col-3:hover{
+
+.testimonial .col-3:hover {
     transform: translateY(-10px);
 }
-.brands{
+
+.brands {
     margin: 100px auto;
 }
-.col-5{
+
+.col-5 {
     width: 160px;
 }
 
-.col-5 img{
+.col-5 img {
     width: 100%;
     cursor: pointer;
     filter: grayscale(100%);
 }
-.col-5 img:hover{
+
+.col-5 img:hover {
     filter: grayscale(0);
 }
 
-
-
-
-
+.btn {
+    text-decoration: none;
+    width: 150px;
+    background-color: #f172dc;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+}
+#user{
+    color: violet !important;
+}

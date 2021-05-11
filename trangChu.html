@@ -11,7 +11,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
-    <link rel="stylesheet" href="index.html">
 </head>
 
 <body>
@@ -26,7 +25,8 @@
                 <li><a href="#">Sơ cấp</a></li>
                 <li><a href="#">Trung cấp</a></li>
                 <li><a href="#">Hán tự</a></li>
-                <li id = "user"></li>
+                <li id = "user" ></li>
+                <li><a href="https://vanduy9491.github.io/formSignUp-SignIn/" class="btn solid">Đăng xuất</a></li>
             </ul>
         </nav>
 
@@ -169,12 +169,10 @@
 
 
 
-
-
     <script src="login.js"></script>
     <script>
         if (getStorage('inforUser')) {
-            document.getElementById('user').innerHTML = '<a href=""> Chào ' + document.getElementById("userName").value +
+            document.getElementById('user').innerHTML = '<a href=""> Chào ' + getStorage('inforUser')[0].userName +
                 '</a>';
         }
     </script>
