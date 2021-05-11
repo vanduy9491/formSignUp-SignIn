@@ -173,7 +173,7 @@
     <script src="login.js"></script>
     <script>
         if (getStorage('inforUser')) {
-            document.getElementById('user').innerHTML = '<a href=""> Chào ' + getStorage('inforUser')[0].userName +
+            document.getElementById('user').innerHTML = '<a href=""> Chào ' + document.getElementById("userName").value +
                 '</a>';
         }
     </script>
