@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,24 +11,55 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
-
-<body onload="init()" >
+<body onload="init()">
+    <div>
+        <label for="nav-mobile-input" class="nav_bars-btn">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                </path>
+            </svg>
+        </label>   
+        <input type="checkbox" hidden name="" class="nav-input" id="nav-mobile-input">
+        <label for="nav-mobile-input" class="nav_overlay"></label>
+        <nav class="nav_mobile">
+            <label for="nav-mobile-input" class="nav_mobile-close">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
+                    class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 352 512">
+                    <path fill="currentColor"
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                    </path>
+                </svg>
+            </label>   
+            <ul class="nav_mobile-list">
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="#"> Nhập môn</a></li>
+                <li><a href="#">Sơ cấp</a></li>
+                <li><a href="#">Trung cấp</a></li>
+                <li><a href="#">Hán tự</a></li>
+                <li id="user"></li>
+                <li><a href="https://vanduy9491.github.io/formSignUp-SignIn/" class="btn1 solid">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="navbar">
         <div class="logo">
             <img src="image/pngwing.com.png" alt="Cổng đổ torii" width="150px">
         </div>
-        <nav>
+        <nav class="nav_pc">
             <ul>
                 <li><a href="">Trang chủ</a></li>
                 <li><a href="#"> Nhập môn</a></li>
                 <li><a href="#">Sơ cấp</a></li>
                 <li><a href="#">Trung cấp</a></li>
                 <li><a href="#">Hán tự</a></li>
-                <li id = "user" ></li>
+                <li id="user"></li>
                 <li><a href="https://vanduy9491.github.io/formSignUp-SignIn/" class="btn solid">Đăng xuất</a></li>
             </ul>
-        </nav>
-
+        </nav>      
     </div>
     <div class="header">
         <div class="container">
@@ -46,7 +76,6 @@
             </div>
         </div>
     </div>
-
     <div class="categories">
         <div class="small-container">
             <div class="row">
@@ -65,9 +94,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div id="build-route">
         <div class="container">
             <div class="row">
@@ -93,10 +120,6 @@
             </div>
         </div>
     </div>
-
-
-
-
     <div class="small-container">
         <h2 class="title">Khóa học của chúng tôi</h2>
         <div class="row">
@@ -117,7 +140,6 @@
             </div>
         </div>
     </div>
-
     <div class="testimonial">
         <div class="small-container">
             <h2 class="title">Cảm nhận của học viên</h2>
@@ -133,7 +155,6 @@
             </div>
         </div>
     </div>
-
     <footer id="footer">
         <div class="footer_content">
 
@@ -166,9 +187,6 @@
 
             </div>
     </footer>
-
-
-
     <script src="login.js"></script>
     <script>
         if (getStorage('inforUser')) {
