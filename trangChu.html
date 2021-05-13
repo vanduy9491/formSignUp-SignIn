@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
-<body onload="init()">
+<body >
     <div>
         <label for="nav-mobile-input" class="nav_bars-btn">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
@@ -57,7 +57,7 @@
                 <li><a href="#">Trung cấp</a></li>
                 <li><a href="#">Hán tự</a></li>
                 <li id="user"></li>
-                <li><a href="https://vanduy9491.github.io/formSignUp-SignIn/" class="btn solid">Đăng xuất</a></li>
+                <li><a href="https://vanduy9491.github.io/formSignUp-SignIn/" class="btn solid"><p>Đăng xuất</p> </a></li>
             </ul>
         </nav>      
     </div>
@@ -187,13 +187,6 @@
 
             </div>
     </footer>
-    <script src="login.js"></script>
-    <script>
-        if (getStorage('inforUser')) {
-            document.getElementById('user').innerHTML = '<a href=""> Chào ' + getStorage('inforUser')[0].userName +
-                '</a>';
-        }
-    </script>
 </body>
 
 </html>
