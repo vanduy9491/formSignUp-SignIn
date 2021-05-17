@@ -33,12 +33,12 @@ function setInfor() {
     let rePassword = document.getElementById("rpw").value;
     let email = document.getElementById("email").value;
     if (password != rePassword) {
-        alert('Mật khẩu không trùng khớp!! Vui lòng kiểm tra lại');
+        showMessage2('Mật khẩu không trùng khớp!! Vui lòng kiểm tra lại');
         return false;
     }
     let pw = password.length;
     if (pw < 6 && pw != "") {
-        alert('Mật khẩu quá ngắn, vui lòng nhập trên 6 ký tự');
+        showMessage2('Mật khẩu quá ngắn, vui lòng nhập trên 6 ký tự');
         return false;
     }
     let user = {
@@ -47,7 +47,7 @@ function setInfor() {
         'email': email,
     }
     if (Uname == "" || password == "" || email == "") {
-        alert(" Vui lòng nhập đầy đủ thông tin");
+        showMessage2(" Vui lòng nhập đầy đủ thông tin");
         return false;
     } else {
         let isFind = false;
@@ -61,13 +61,28 @@ function setInfor() {
             userList.push(user)
         }
         if (Uname.indexOf(' ') >= 0) {
-            alert('Username không được nhập khoảng trắng');
+            showMessage2('Username không được nhập khoảng trắng');
             return false;
         } else {
             setStorage(userList);
         }
+        let the_email = document.getElementById("email").value;
+        let at = the_email.indexOf("@");
+        let dot = the_email.lastIndexOf(".");
+        let space = the_email.indexOf(" ");
+
+        if ((at != -1) &&
+            (at != 0) &&
+            (dot != -1) &&
+            (dot > at + 1) && (dot < the_email.length - 1) &&
+            (space == -1)) {
+            return true;
+        } else {
+            showMessage2("Email không hợp lệ");
+            return false;
+        }
     }
-    return true
+
 }
 
 function check(user) {
@@ -79,33 +94,59 @@ function check(user) {
     }
     return false;
 }
+
+function showMessage1(message) {
+    let msg = document.getElementById('msg');
+    msg.classList.remove('d-none');
+    msg.classList.add('alert-error');
+    let content = msg.children[0];
+    content.innerHTML = message;
+}
+
+function showMessage2(message) {
+    let msg = document.getElementById('msg2');
+    msg.classList.remove('d-none');
+    msg.classList.add('alert-error');
+    let content = msg.children[0];
+    content.innerHTML = message;
+}
+
+function closeMessage() {
+    let msg = document.getElementById('msg');
+    msg.classList.add('d-none');
+}
+
+function closeMessage2() {
+    let msg = document.getElementById('msg2');
+    msg.classList.add('d-none');
+}
+
 function validate() {
     let userName = document.getElementById("userName").value;
     let password = document.getElementById("password").value;
     if (userName == "" && password == "") {
-        alert("Vui lòng nhập Username và password");
+        showMessage1("Hãy nhập Username và Password")
         return false;
     } else if (userName == "") {
-        alert("Hãy nhập Username");
+        showMessage1("Hãy nhập Username ")
         return false;
     } else if (password == "") {
-        alert("Hãy nhập password");
+        showMessage1("Hãy nhập  Password")
         return false;
     }
     if (check(userName)) {
         for (let i = 0; i < userList.length; i++) {
             if (userList[i].userName === userName) {
                 if (userList[i].password === password) {
-                    alert('Đăng nhập thành công');
                     return true;
                 } else {
-                    alert('Sai mật khẩu');
+                    showMessage1('Sai mật khẩu');
                     return false;
                 }
             }
         }
     } else {
-        alert("Username không tồn tại");
+        showMessage1("Username không tồn tại");
         return false;
     }
 }

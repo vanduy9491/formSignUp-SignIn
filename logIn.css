@@ -413,3 +413,24 @@ form.sign-in-form {
     border :none;
     outline: none;
 }
+
+.row{
+  width: 100%;
+}
+
+.d-none{
+  display: none;
+}
+
+.btn-danger{
+  background-color: #d63031;
+  border: 1px solid #ff7675;
+}
+
+.alert-error{
+  padding: 15px 0px;
+  color:red;
+  text-align: center;
+}
+
+

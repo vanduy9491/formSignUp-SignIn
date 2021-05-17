@@ -18,12 +18,15 @@
                     <h2 class="title">Đăng nhập</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="userName">
+                        <input type="text" placeholder="Username" id="userName" onclick="closeMessage()">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password">
+                        <input type="password" placeholder="Password" id="password" onclick="closeMessage()">
                     </div>
+                    <div id="msg" class="row d-none">
+                        <span></span>
+                     </div>
                     <input type="submit" class="btn solid" value="Đăng nhập">
                     <p class="social-text">Hoặc đăng nhập với:</p>
                     <div class="social-media">
@@ -40,20 +43,23 @@
                     <h2 class="title">Đăng ký</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="uname">
+                        <input type="text" placeholder="Username" id="uname" onclick="closeMessage2()">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Email" id="email">
+                        <input type="text" placeholder="Email" id="email" onclick="closeMessage2()">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="pw">
+                        <input type="password" placeholder="Password" id="pw" onclick="closeMessage2()">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="RePassword" id="rpw">
+                        <input type="password" placeholder="RePassword" id="rpw" onclick="closeMessage2()">
                     </div>
+                    <div id="msg2" class="row d-none">
+                        <span></span>
+                     </div>
                     <input type="submit" class="btn solid" value="Đăng ký">
 
 
